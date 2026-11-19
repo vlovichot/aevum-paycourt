@@ -96,6 +96,6 @@ mock anywhere except plain anvil). Recorded:
 
 - [x] Push this repo to a public GitHub repo; open it logged-out to verify — done 2026-11-19
 - [x] No keys/.env/secrets in the tree or history (`git log -p | grep` check) — done 2026-11-19
-- [ ] Demo video (2–3 min, link publicly viewable) + be ready for the
+- [x] Demo video (2–3 min, link publicly viewable) + be ready for the
       top-5 live video-call demo (2026-12-15 14:00 HKT)
-- [ ] Submit on https://dorahacks.io/hackathon/qday/detail
+- [x] Submit on https://dorahacks.io/hackathon/qday/detail
