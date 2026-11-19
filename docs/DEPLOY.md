@@ -1,6 +1,12 @@
 # Deploying PayCourt to QDay Aevum testnet
 
-Status: **not yet deployed** — waiting on the deploy-signature decision (step 1).
+Status: **preparation complete, awaiting the user's MetaMask clicks** — signing
+option **B chosen by the user 2026-11-19** (Remix + MetaMask, user confirms).
+Repo is public: https://github.com/vlovichot/aevum-paycourt — Remix has the
+flattened contract loaded from that repo, compiled with solc 0.8.24 /
+EVM shanghai / optimizer 200, constructor args filled
+(token = real tUSD8, maxCase = 100000000). Remaining user clicks are listed
+in step 1B.
 Everything below is rehearsed locally (`scripts/e2e-local.sh`).
 
 ## 0. Prerequisites (done)
@@ -23,9 +29,23 @@ never goes through chat and is never handled by the assistant. Pick one:
   types the key into the terminal prompt himself. Afterwards deployments run
   non-interactively with `--account aevum-deployer`, no key material in any
   file the assistant writes.
-- **B. Remix + MetaMask**: deploy `EscrowCourt` from the cloud browser with
+- **B. Remix + MetaMask** ✅ CHOSEN: deploy `EscrowCourt` from the cloud browser with
   MetaMask; the user confirms the transaction himself. Constructor args:
   token `0x456569838f1d43009A91ebA4263147Afd7233483`, maxCase `100000000`.
+
+### 1B. Handover state (2026-11-19)
+
+Remix (app.remix.live) is open in the cloud browser with
+`contracts/flattened/EscrowCourt.flat.sol` loaded from the public repo,
+compiled (0.8.24 / shanghai / optimizer 200), Deploy panel set to
+EscrowCourt with constructor args filled. The user now:
+1. Environment dropdown → "Injected Provider - MetaMask"; unlock/connect
+   account 0x6Fde…F619 in the MetaMask popup.
+2. Add/switch MetaMask to QDay Aevum Testnet (chain 44005,
+   RPC https://rpc-test.qday.info, symbol tQDAY,
+   explorer https://explorer-test.qday.info).
+3. Click Deploy in Remix; confirm the creation transaction in MetaMask.
+Then the assistant reads the deployed address and continues at step 3.
 - **C. User runs the forge command himself** in a terminal session with his
   own key handling; assistant provides the exact command.
 
