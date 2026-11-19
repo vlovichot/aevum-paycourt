@@ -68,9 +68,15 @@ interface JudgeState {
   processed: Record<string, { verdict: string; txHash?: string; reasonHash?: string; note?: string }>;
 }
 
-function loadState(): JudgeState {
+async function loadState(): Promise<JudgeState> {
   if (existsSync(STATE_FILE)) return JSON.parse(readFileSync(STATE_FILE, "utf8")) as JudgeState;
-  return { lastScannedBlock: "0", pending: [], processed: {} };
+  // First run: start at the current head. Scanning from genesis is impractical
+  // on a live chain (millions of blocks); a judge rules on new disputes.
+  // Set STATE_FILE with a lower lastScannedBlock to catch up on history.
+  const head = await publicClient.getBlockNumber();
+  const fresh: JudgeState = { lastScannedBlock: head.toString(), pending: [], processed: {} };
+  saveState(fresh);
+  return fresh;
 }
 
 function saveState(s: JudgeState) {
@@ -189,7 +195,7 @@ async function poll(state: JudgeState) {
 
 async function main() {
   const once = process.argv.includes("--once");
-  const state = loadState();
+  const state = await loadState();
   console.log(`[judge] arbiter ${judge.address}, escrow ${ESCROW_ADDRESS}, chain ${CHAIN_ID}`);
   for (;;) {
     try {

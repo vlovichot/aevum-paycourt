@@ -87,6 +87,21 @@ deploy tx
 (deployed 2026-11-19 via Remix + MetaMask; verified on-chain:
 token = real tUSD8, maxCaseAmount = 100 tUSD8).
 
+**Live run, 2026-11-19** — the full flow ran on testnet with real tUSD8
+(2 tUSD8 per case, throwaway role wallets):
+
+- Case #1: gateway 402 → buyer EIP-3009 authorization → escrow opened →
+  seller delivered → buyer confirmed →
+  [release tx](https://explorer-test.qday.info/tx/0xfaa2055d670107936e9445e67b1d78e467632f89fbb311450f0fc20c2c8ebef2). Seller paid.
+- Case #2: same purchase, then buyer disputed
+  ([tx](https://explorer-test.qday.info/tx/0x0e6986128d6f964a369334204508a743599c3092aa9bdf7b66b1980774696d91)) →
+  judge agent checked the gateway proof against the on-chain hash, matched,
+  and resolved RELEASE
+  ([tx](https://explorer-test.qday.info/tx/0xb9b91589da33d57ea99fd8c1592a82323dd4e16bd8503b34c6e6207cbfce3b03))
+  with the rubric hash recorded on-chain.
+
+Demo funds were returned to the funding wallet afterwards.
+
 ## Credits
 
 Scaffolded from the official

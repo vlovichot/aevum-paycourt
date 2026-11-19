@@ -85,17 +85,17 @@ mock anywhere except plain anvil). Recorded:
 
 ## 4. Live-fire checklist (all on Aevum testnet)
 
-- [ ] Gateway `/health` shows chain 44005 + deployed escrow
-- [ ] Buyer agent buys a report (case opened with real tUSD8, locked)
-- [ ] Delivery marked on-chain; buyer confirms → seller balance +price
-- [ ] Second purchase disputed → judge resolves; verdict + reason hash on-chain
-- [ ] Explorer links for: deploy tx, case-open tx, release tx, verdict tx
-- [ ] Fill the addresses into README.md and the DoraHacks submission
+- [x] Gateway `/health` shows chain 44005 + deployed escrow — done 2026-11-19
+- [x] Buyer agent buys a report (case opened with real tUSD8, locked) — done 2026-11-19
+- [x] Delivery marked on-chain; buyer confirms → seller balance +price — done 2026-11-19
+- [x] Second purchase disputed → judge resolves; verdict + reason hash on-chain — done 2026-11-19
+- [x] Explorer links for: deploy tx, case-open tx, release tx, verdict tx — done 2026-11-19
+- [x] Fill the addresses into README.md and the DoraHacks submission — README done 2026-11-19; DoraHacks form pending
 
 ## 5. Submission (before 2026-12-11 16:00 CST)
 
-- [ ] Push this repo to a public GitHub repo; open it logged-out to verify
-- [ ] No keys/.env/secrets in the tree or history (`git log -p | grep` check)
+- [x] Push this repo to a public GitHub repo; open it logged-out to verify — done 2026-11-19
+- [x] No keys/.env/secrets in the tree or history (`git log -p | grep` check) — done 2026-11-19
 - [ ] Demo video (2–3 min, link publicly viewable) + be ready for the
       top-5 live video-call demo (2026-12-15 14:00 HKT)
 - [ ] Submit on https://dorahacks.io/hackathon/qday/detail

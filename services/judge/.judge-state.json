@@ -1,0 +1,11 @@
+{
+  "lastScannedBlock": "3543850",
+  "pending": [],
+  "processed": {
+    "2": {
+      "verdict": "RELEASE",
+      "txHash": "0xb9b91589da33d57ea99fd8c1592a82323dd4e16bd8503b34c6e6207cbfce3b03",
+      "reasonHash": "0xea484e6170b6cdc3c9e8853ebbb64c0a61eba8e4a1d8b501423f049d575034dd"
+    }
+  }
+}
