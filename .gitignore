@@ -15,3 +15,6 @@ contracts/cache/
 contracts/broadcast/
 
 .DS_Store
+
+# judge runtime state
+services/judge/.judge-state.json
