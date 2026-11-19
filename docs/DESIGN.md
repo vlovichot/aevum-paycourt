@@ -131,5 +131,5 @@ seller agent marks delivery (proof = hash of report) → buyer confirms
 1. Contract + unit tests (local) ✅ done 2026-11-19
 2. Gateway + judge end-to-end on local anvil (scripts/e2e-local.sh, scenarios A/B/C) ✅ done 2026-11-19
 3. Deploy to Aevum testnet ✅ done 2026-11-19 (0x69cAd92E78508Dc07caD7F341F29B74b79EAc83c); full flow with real tUSD8 in progress
-4. Web demo wired to testnet deployment
+4. Web demo wired to testnet deployment ✅ done 2026-11-19 (web /paycourt: case board + role actions, defaults to the deployed EscrowCourt)
 5. README, demo script, DoraHacks submission

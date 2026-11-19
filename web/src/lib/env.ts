@@ -10,6 +10,8 @@ export interface Network {
   chain: Chain;
   /** Your Checkout on this network, if you deployed one. */
   checkout?: Address;
+  /** PayCourt EscrowCourt on this network, if deployed. */
+  escrow?: Address;
   /** Only scan events from this block onward on the Activity page. */
   deployBlock?: bigint;
   /** Explorer links only make sense on the real testnet. */
@@ -26,6 +28,8 @@ const all: Record<NetworkKey, Network> = {
     label: "Aevum testnet",
     chain: aevumTestnet,
     checkout: address(process.env.NEXT_PUBLIC_CHECKOUT_AEVUM),
+    // PayCourt EscrowCourt, deployed 2026-11-19 (docs/DEPLOY.md). Env can override.
+    escrow: address(process.env.NEXT_PUBLIC_ESCROW_AEVUM) ?? "0x69cAd92E78508Dc07caD7F341F29B74b79EAc83c",
     deployBlock: block(process.env.NEXT_PUBLIC_DEPLOY_BLOCK_AEVUM),
     hasExplorer: true,
   },

@@ -1,6 +1,6 @@
 # Deploying PayCourt to QDay Aevum testnet
 
-Status: **EscrowCourt DEPLOYED 2026-11-19** via signing option **B**
+Status: **EscrowCourt DEPLOYED 2026-11-19; web demo (/paycourt) built and wired** via signing option **B**
 (Remix + MetaMask, user confirmed). Address
 `0x69cAd92E78508Dc07caD7F341F29B74b79EAc83c`, deploy tx
 `0xe02eed4db5c9682931e1a5a55eecbdc36139448adde638583d6c73b21501a9da`;
