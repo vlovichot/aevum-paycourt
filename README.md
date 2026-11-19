@@ -80,7 +80,12 @@ Contracts compile for **Shanghai** (`evm_version = "shanghai"` — Cancun
 opcodes fail on-chain). `eth_getLogs` is capped at 1,000 blocks per call and
 there is no WebSocket RPC; services poll with chunked log reads.
 
-Testnet deployment addresses: _to be filled after deployment (docs/DEPLOY.md)._
+Testnet deployment: **EscrowCourt on QDay Aevum testnet (44005)** —
+[`0x69cAd92E78508Dc07caD7F341F29B74b79EAc83c`](https://explorer-test.qday.info/address/0x69cAd92E78508Dc07caD7F341F29B74b79EAc83c),
+deploy tx
+[`0xe02eed4db5c9682931e1a5a55eecbdc36139448adde638583d6c73b21501a9da`](https://explorer-test.qday.info/tx/0xe02eed4db5c9682931e1a5a55eecbdc36139448adde638583d6c73b21501a9da)
+(deployed 2026-11-19 via Remix + MetaMask; verified on-chain:
+token = real tUSD8, maxCaseAmount = 100 tUSD8).
 
 ## Credits
 

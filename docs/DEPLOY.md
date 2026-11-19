@@ -1,7 +1,11 @@
 # Deploying PayCourt to QDay Aevum testnet
 
-Status: **preparation complete, awaiting the user's MetaMask clicks** — signing
-option **B chosen by the user 2026-11-19** (Remix + MetaMask, user confirms).
+Status: **EscrowCourt DEPLOYED 2026-11-19** via signing option **B**
+(Remix + MetaMask, user confirmed). Address
+`0x69cAd92E78508Dc07caD7F341F29B74b79EAc83c`, deploy tx
+`0xe02eed4db5c9682931e1a5a55eecbdc36139448adde638583d6c73b21501a9da`;
+verified on-chain (token = real tUSD8, maxCaseAmount = 100000000,
+deployment cost ≈ 0.0011 tQDAY). Next: step 3/4 live flow.
 Repo is public: https://github.com/vlovichot/aevum-paycourt — Remix has the
 flattened contract loaded from that repo, compiled with solc 0.8.24 /
 EVM shanghai / optimizer 200, constructor args filled
@@ -61,10 +65,10 @@ forge script script/DeployEscrow.s.sol \
 ```
 
 Expected: token resolves to the real tUSD8 (the script refuses to deploy a
-mock anywhere except plain anvil). Record:
+mock anywhere except plain anvil). Recorded:
 
-- EscrowCourt address: _TBD_
-- Deploy tx: _TBD_
+- EscrowCourt address: `0x69cAd92E78508Dc07caD7F341F29B74b79EAc83c`
+- Deploy tx: `0xe02eed4db5c9682931e1a5a55eecbdc36139448adde638583d6c73b21501a9da`
 
 ## 3. Point the services at testnet
 
