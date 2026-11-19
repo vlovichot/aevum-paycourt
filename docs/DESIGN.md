@@ -128,8 +128,8 @@ seller agent marks delivery (proof = hash of report) → buyer confirms
 
 ## Milestones
 
-1. Contract + unit tests (local) ✅ target: today
-2. Gateway + judge running against a local Aevum fork (anvil) end-to-end
+1. Contract + unit tests (local) ✅ done 2026-11-19
+2. Gateway + judge end-to-end on local anvil (scripts/e2e-local.sh, scenarios A/B/C) ✅ done 2026-11-19
 3. Deploy to Aevum testnet, run the full flow with real tUSD8
 4. Web demo wired to testnet deployment
 5. README, demo script, DoraHacks submission
