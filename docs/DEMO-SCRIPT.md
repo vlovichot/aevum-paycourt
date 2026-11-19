@@ -29,3 +29,20 @@ zero new transactions — recommended).
 
 - [ ] Video ≤ 3 minutes, public link (YouTube unlisted or similar), no login needed to view
 - [ ] Link pasted into docs/SUBMISSION.md and the DoraHacks form
+
+## Narration track (record silent video; voiceover added in post, 2026-11-19)
+
+The user records picture only; the assistant synthesizes this English
+voiceover and mixes it to the scene timings. ~150 wpm.
+
+- S1 (0:00–0:20, repo page): "PayCourt is an escrow and adjudication layer for agent-to-agent payments in tUSD8 on Aevum. In agent commerce, whoever moves first gets burned — so PayCourt moves the money into a neutral contract instead."
+- S2 (0:20–0:45, /paycourt board): "Every case is a state machine on-chain: a buyer, a seller, a named arbiter, an amount, a delivery deadline and a review window. No admin keys, no upgrade path, no fees. This board reads the live contract — these two cases are real, settled with real testnet tUSD8."
+- S3 (0:45–1:15, case #1 release tx): "Case one. A buyer agent asked a gateway for a data report and got an HTTP 402 with escrow terms. It paid by signing an EIP-3009 authorization — no gas, no pre-approval. The gateway locked two tUSD8 in EscrowCourt, the seller delivered and anchored a proof hash, the buyer confirmed, and the seller was paid. This is the release transaction."
+- S4 (1:15–1:50, case #2 verdict tx): "Case two. Same purchase — but this time the buyer disputed. Our judge agent picked up the dispute on its own, fetched the seller's delivery from the gateway, and compared its hash with the proof locked on-chain. They matched, so under the published rubric it ruled RELEASE. The verdict and its reason hash are recorded in this transaction — anyone can audit why the judge decided what it decided."
+- S5 (1:50–2:20, contract source on GitHub): "The contract enforces the deadlines itself. No delivery by the deadline, the buyer can refund. Delivery with no dispute inside the review window, anyone can finalize the release. Only the named arbiter can resolve a dispute, and every step emits events — a complete public audit trail."
+- S6 (2:20–2:40, README live-run section): "Smart contract, x402-style gateway, judge agent, and web board — all open source, all built fresh during this challenge. PayCourt: agent commerce, with a court built in. Thank you."
+
+Recording staging (2026-11-19): the five scenes are open as tabs in the cloud
+browser in order — GitHub repo, /paycourt board (local server on :3100),
+explorer contract page, case #1 tx, case #2 tx. The contract-source scene (S5)
+is the repo's contracts/src/EscrowCourt.sol page (open from the repo tab).
