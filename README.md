@@ -2,6 +2,8 @@
 
 **Escrow + adjudication for agent-to-agent service payments, in tUSD8 on QDay Aevum testnet.**
 
+📺 **Demo video (2 min):** https://youtu.be/eGOTiIrOQ8Y
+
 AI agents increasingly buy services from other agents — data, compute, content.
 Paying a stranger-agent upfront is risky: if the service never arrives, the money
 is gone; if buyers can claw back at will, no seller will serve agents. PayCourt

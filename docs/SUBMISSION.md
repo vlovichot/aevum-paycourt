@@ -37,7 +37,7 @@ Live proof (Aevum testnet, real tUSD8, 2026-11-19): case #1 ran the happy path e
 - Deploy tx: https://explorer-test.qday.info/tx/0xe02eed4db5c9682931e1a5a55eecbdc36139448adde638583d6c73b21501a9da
 - Case #1 release tx: https://explorer-test.qday.info/tx/0xfaa2055d670107936e9445e67b1d78e467632f89fbb311450f0fc20c2c8ebef2
 - Case #2 verdict tx: https://explorer-test.qday.info/tx/0xb9b91589da33d57ea99fd8c1592a82323dd4e16bd8503b34c6e6207cbfce3b03
-- Demo video: _paste public link after recording (docs/DEMO-SCRIPT.md)_
+- Demo video: https://youtu.be/eGOTiIrOQ8Y
 
 ## Team
 
